@@ -1,0 +1,5 @@
+git+https://github.com/ricrudo/ried_kivy.git
+git+https://github.com/ricrudo/ried.git
+kivy
+midiutil
+requests
