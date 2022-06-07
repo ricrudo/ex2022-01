@@ -5,7 +5,7 @@ from ried_kivy.interactive_staff import staff_generator
 
 from audio import midi
 
-statement = 'Selecciones "Verdadero" si la MELODIA presentada en el audio coincide con la partitura que se encuentra debajo, de lo contrario seleccione "Falso".'
+statement = 'Seleccione "Verdadero" si la MELODIA presentada en el audio coincide con la partitura que se encuentra debajo, de lo contrario seleccione "Falso".'
 
 class Quest_Gen:
 

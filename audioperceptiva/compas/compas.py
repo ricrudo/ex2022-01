@@ -7,7 +7,7 @@ from ried_kivy.interactive_staff import staff_generator
 
 from audio import midi
 
-statement = 'El siguiente audio presenta representa un metrónomo con 3 sonidos a distintas alturas. El sonido más agudo indica el primer pulso del compás, el sonido medio indica los demás pulsos del compás y el sonido más grave la subdivisión natural de cada pulso. Seleccione "Verdadero" si el audio conincide con el compás presentado en el pentagrama, de lo contrario seleccione "Falso".'
+statement = 'El siguiente audio presenta un metrónomo con 3 sonidos a distintas alturas. El sonido más agudo indica la primera fracción del compás, el sonido medio indica el comienzo de los demás pulsos del compás y el sonido más grave el resto de fracciones de cada pulso. Seleccione "Verdadero" si el audio conincide con el compás presentado en el pentagrama, de lo contrario seleccione "Falso".'
 
 class Quest_Gen:
 

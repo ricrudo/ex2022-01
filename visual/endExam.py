@@ -63,7 +63,7 @@ string = '''
         height: 100
         y: 100
         bold: True
-        text: 'Encuentranos en'
+        text: 'Encuéntranos en'
     Image:
         size_hint: None, None
         pos: 537, 50 

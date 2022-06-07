@@ -11,7 +11,7 @@ from ried.chord.chord_generator import Chord
 from audio import midi
 
 
-statement = 'Selecciones "Verdadero" si el INTERVALO presentado en el audio coincide con la descripción que se encuentra debajo, de lo contrario seleccione "Falso".'
+statement = 'Seleccione "Verdadero" si el INTERVALO presentado en el audio coincide con la descripción que se encuentra debajo, de lo contrario seleccione "Falso".'
 
 class Quest_Gen:
     with open(os.sep.join(['audioperceptiva', 'intervals', 'content.json'])) as f:
