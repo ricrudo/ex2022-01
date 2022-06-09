@@ -12,98 +12,103 @@ import requests
 stringKv = '''
 #:import os os
 <Login>
-    canvas.before:
-        Rectangle:
-            size:self.size
-            pos:self.pos
-            source: "assets/bk.jpg"
-    Label:
+    RelativeLayout:
+        size_hint: None, None
+        size: 1024, 768
+        pos: (self.parent.width/2)-512, (self.parent.height/2)-384
+        
         canvas.before:
-            Color:
-                rgba: 0,0,0,0.3
             Rectangle:
-                size: self.size
-                pos: self.pos
-        color: 0.8, 0.8, 0.8, 1
-        size_hint: None, None
-        size: 900, 100
-        pos: 62, 600
-        font_size: '35dp'
-        text_size: self.size
-        halign: 'center'
-        valign: 'middle'
-        bold: True
-        text: 'Bienvenido al examen de admisión al Programa de Música de la Universidad del Atlántico'
-    Label:
-        size: 200, 50
-        pos: 100, 450
-        canvas.before:
-            Color:
-                rgba: 0,0,0,0.3
-            Rectangle:
-                size: 1024, self.size[1] + 4
-                pos: 0, self.pos[1] - 2
-        size_hint: None, None
-        font_size: '24dp'
-        color: 0.8, 0.8, 0.8, 1
-        text: 'Nombre completo'
-    TextInput:
-        id: name
-        size_hint: None, None
-        size: 900-320, 50 
-        pos: 320, 450
-        font_size: '24dp'
-    Widget:
-        color: 1,0,0,0
-        id: shadowName
-        canvas.before:
-            Color:
-                rgba: self.color
-            Line:
-                rectangle: name.pos[0] - 2, name.pos[1] -2, name.size[0] + 4, name.size[1] + 4
-                width: 1.5
-    Label:
-        size_hint: None, None
-        size: 200, 50 
-        pos: 100, 350
-        canvas.before:
-            Color:
-                rgba: 0,0,0,0.3
-            Rectangle:
-                size: 1024, self.size[1] + 4
-                pos: 0, self.pos[1] - 2
-        font_size: '24dp'
-        text: 'No. Identificación'
-    TextInput:
-        id: identifica
-        size_hint: None, None
-        size: 300, 50 
-        pos: 320, 350
-        font_size: '24dp'
-    Widget:
-        color: 1,0,0,0
-        id: shadowID
-        canvas.before:
-            Color:
-                rgba: self.color
-            Line:
-                rectangle: identifica.pos[0] - 2, identifica.pos[1] -2, identifica.size[0] + 4, identifica.size[1] + 4
-                width: 1.5
-    ButtonBlack:
-        pos: (1024/2)-100, 200
-        text: 'Comenzar'
-        on_release: root.start(self, name, identifica)
-    Image:
-        size_hint: None, None
-        size: 130, 130 
-        pos: 1024-150, 10
-        source: 'assets/logoRied.png'
-    Label:
-        size_hint: None, None
-        size: 130, 50 
-        pos: 1024-150, 130
-        font_size: '24dp'
-        text: 'Powered by'
+                size:self.size
+                pos:0, 0
+                source: "assets/bk.jpg"
+        Label:
+            canvas.before:
+                Color:
+                    rgba: 0,0,0,0.3
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+            color: 0.8, 0.8, 0.8, 1
+            size_hint: None, None
+            size: 900, 100
+            pos: 62, 600
+            font_size: '35dp'
+            text_size: self.size
+            halign: 'center'
+            valign: 'middle'
+            bold: True
+            text: 'Bienvenido al examen de admisión al Programa de Música de la Universidad del Atlántico'
+        Label:
+            size: 200, 50
+            pos: 100, 450
+            canvas.before:
+                Color:
+                    rgba: 0,0,0,0.3
+                Rectangle:
+                    size: 1024, self.size[1] + 4
+                    pos: 0, self.pos[1] - 2
+            size_hint: None, None
+            font_size: '24dp'
+            color: 0.8, 0.8, 0.8, 1
+            text: 'Nombre completo'
+        TextInput:
+            id: name
+            size_hint: None, None
+            size: 900-320, 50 
+            pos: 320, 450
+            font_size: '24dp'
+        Widget:
+            color: 1,0,0,0
+            id: shadowName
+            canvas.before:
+                Color:
+                    rgba: self.color
+                Line:
+                    rectangle: name.pos[0] - 2, name.pos[1] -2, name.size[0] + 4, name.size[1] + 4
+                    width: 1.5
+        Label:
+            size_hint: None, None
+            size: 200, 50 
+            pos: 100, 350
+            canvas.before:
+                Color:
+                    rgba: 0,0,0,0.3
+                Rectangle:
+                    size: 1024, self.size[1] + 4
+                    pos: 0, self.pos[1] - 2
+            font_size: '24dp'
+            text: 'No. Identificación'
+        TextInput:
+            id: identifica
+            size_hint: None, None
+            size: 300, 50 
+            pos: 320, 350
+            font_size: '24dp'
+        Widget:
+            color: 1,0,0,0
+            id: shadowID
+            canvas.before:
+                Color:
+                    rgba: self.color
+                Line:
+                    rectangle: identifica.pos[0] - 2, identifica.pos[1] -2, identifica.size[0] + 4, identifica.size[1] + 4
+                    width: 1.5
+        ButtonBlack:
+            pos: (1024/2)-100, 200
+            text: 'Comenzar'
+            on_release: root.start(self, name, identifica)
+        Image:
+            size_hint: None, None
+            size: 130, 130 
+            pos: 1024-150, 10
+            source: 'assets/logoRied.png'
+        Label:
+            size_hint: None, None
+            size: 130, 50 
+            pos: 1024-150, 130
+            font_size: '24dp'
+            text: 'Powered by'
 
 '''
 

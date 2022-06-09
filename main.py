@@ -4,8 +4,9 @@ from kivy.uix.screenmanager import ScreenManager, Screen, FadeTransition
 from kivy.config import Config
 
 Config.set('graphics', 'resizable', False)
-Config.set('graphics', 'height', '768')
-Config.set('graphics', 'width', '1024')
+#Config.set('graphics', 'height', '768')
+#Config.set('graphics', 'width', '1024')
+Config.set('graphics', 'fullscreen', 'auto')
 Config.set('kivy', 'exit_on_escape', 0)
 
 from ried_kivy.interactive_staff import staff_generator

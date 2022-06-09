@@ -48,6 +48,14 @@ string = '''
             size:self.size
             pos:self.pos
             source: "assets/borde.png"
+<BlackOut@Widget>
+    size_hint: None, None
+    canvas.after:
+        Color:
+            rgba: 0,0,0,1
+        Rectangle:
+            pos: self.pos
+            size: self.size
 '''
 
 Builder.load_string(string)
