@@ -148,7 +148,7 @@ class Login(Screen):
 
     def check_user(self, nombre, cedula):
         cedula = ''.join([x for x in cedula if x.isdigit()])
-        if os.path.exists(os.sep.join(['login', 'users', cedula+'.dlt'])):
+        if os.path.exists(os.sep.join(['login', 'users', cedula + '.dlt'])):
             self.load_exam(cedula)
             self.sm.totalQstn = self.count_questions()
             self.sm.indexQstn = self.seek_header()
@@ -217,6 +217,9 @@ class Login(Screen):
         elif category == 'melody':
             q = audioperceptiva.melody.Quest_Gen(counter=self.counter, n_answers=n_answers)
             self.sm.data['audioperceptiva']['melody'] = q.answers
+        elif category == 'modesScales':
+            q = audioperceptiva.modesScales.Quest_Gen(counter=self.counter, n_answers=n_answers)
+            self.sm.data['audioperceptiva']['modesScales'] = q.answers
         else:
             raise ValueError(f'{category} not found in teoria section')
         self.counter = q.counter
@@ -237,6 +240,9 @@ class Login(Screen):
         elif category == 'scales':
             q = teoria.scales.Quest_Gen(counter=self.counter, n_answers=n_answers)
             self.sm.data['teoria']['scales'] = q.answers
+        elif category == 'modesScales':
+            q = teoria.modesScales.Quest_Gen(counter=self.counter, n_answers=n_answers)
+            self.sm.data['teoria']['modesScales'] = q.answers
         else:
             raise ValueError(f'{category} not found in teoria section')
         self.counter = q.counter

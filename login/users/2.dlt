@@ -1,0 +1,50 @@
+{
+    "nombre": "_",
+    "cedula": "2",
+    "audioperceptiva": {},
+    "teoria": {
+        "modesScales": {
+            "question_1": {
+                "audio": "B lidia",
+                "visual": "B d\u00f3rica"
+            },
+            "question_2": {
+                "audio": "A e\u00f3lica",
+                "visual": "A e\u00f3lica"
+            },
+            "question_3": {
+                "audio": "G frigia",
+                "visual": "G frigia"
+            },
+            "question_4": {
+                "audio": "F# j\u00f3nica",
+                "visual": "F# j\u00f3nica"
+            },
+            "question_5": {
+                "audio": "F# e\u00f3lica",
+                "visual": "F# locria"
+            },
+            "question_6": {
+                "audio": "C j\u00f3nica",
+                "visual": "C locria"
+            },
+            "question_7": {
+                "audio": "G lidia",
+                "visual": "G lidia"
+            },
+            "question_8": {
+                "audio": "G j\u00f3nica",
+                "visual": "G j\u00f3nica"
+            },
+            "question_9": {
+                "audio": "C# locria",
+                "visual": "C# lidia"
+            },
+            "question_10": {
+                "audio": "G e\u00f3lica",
+                "visual": "G lidia"
+            }
+        }
+    },
+    "left_time": 5520000
+}

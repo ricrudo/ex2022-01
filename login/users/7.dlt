@@ -1,0 +1,50 @@
+{
+    "nombre": "_",
+    "cedula": "7",
+    "audioperceptiva": {},
+    "teoria": {
+        "modesScales": {
+            "question_1": {
+                "audio": "C# mixolidia",
+                "visual": "C# eolica"
+            },
+            "question_2": {
+                "audio": "Ab lidia",
+                "visual": "Ab eolica"
+            },
+            "question_3": {
+                "audio": "Eb eolica",
+                "visual": "Eb eolica"
+            },
+            "question_4": {
+                "audio": "Ab frigia",
+                "visual": "Ab locria"
+            },
+            "question_5": {
+                "audio": "B lidia",
+                "visual": "B lidia"
+            },
+            "question_6": {
+                "audio": "F dorica",
+                "visual": "F dorica"
+            },
+            "question_7": {
+                "audio": "A eolica",
+                "visual": "A frigia"
+            },
+            "question_8": {
+                "audio": "Bb jonica",
+                "visual": "Bb dorica"
+            },
+            "question_9": {
+                "audio": "Bb dorica",
+                "visual": "Bb dorica"
+            },
+            "question_10": {
+                "audio": "C# eolica",
+                "visual": "C# eolica"
+            }
+        }
+    },
+    "left_time": 5512000
+}

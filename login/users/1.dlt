@@ -1,0 +1,50 @@
+{
+    "nombre": "_",
+    "cedula": "1",
+    "audioperceptiva": {},
+    "teoria": {
+        "scales": {
+            "question_1": {
+                "audio": "A mayor",
+                "visual": "A menor melodica"
+            },
+            "question_2": {
+                "audio": "Db mayor",
+                "visual": "Db menor melodica"
+            },
+            "question_3": {
+                "audio": "B menor natural",
+                "visual": "B menor armonica"
+            },
+            "question_4": {
+                "audio": "C# menor natural",
+                "visual": "C# menor natural"
+            },
+            "question_5": {
+                "audio": "E menor natural",
+                "visual": "E menor armonica"
+            },
+            "question_6": {
+                "audio": "Eb menor natural",
+                "visual": "Eb menor natural"
+            },
+            "question_7": {
+                "audio": "F# menor natural",
+                "visual": "F# menor melodica"
+            },
+            "question_8": {
+                "audio": "A menor armonica",
+                "visual": "A menor natural"
+            },
+            "question_9": {
+                "audio": "D menor armonica",
+                "visual": "D menor armonica"
+            },
+            "question_10": {
+                "audio": "E menor melodica",
+                "visual": "E menor melodica"
+            }
+        }
+    },
+    "left_time": 5518000
+}

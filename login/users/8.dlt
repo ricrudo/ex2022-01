@@ -1,0 +1,71 @@
+{
+    "nombre": "_",
+    "cedula": "8",
+    "audioperceptiva": {},
+    "teoria": {
+        "modesScales": {
+            "question_1": {
+                "audio": "B mixolidia",
+                "visual": "B mixolidia",
+                "answer": "true",
+                "points": 1
+            },
+            "question_2": {
+                "audio": "A frigia",
+                "visual": "A frigia",
+                "answer": "true",
+                "points": 1
+            },
+            "question_3": {
+                "audio": "F# mixolidia",
+                "visual": "F# dorica",
+                "answer": "false",
+                "points": 1
+            },
+            "question_4": {
+                "audio": "Bb frigia",
+                "visual": "Bb frigia",
+                "answer": "true",
+                "points": 1
+            },
+            "question_5": {
+                "audio": "G frigia",
+                "visual": "G frigia",
+                "answer": "true",
+                "points": 1
+            },
+            "question_6": {
+                "audio": "Ab jonica",
+                "visual": "Ab frigia",
+                "answer": "false",
+                "points": 1
+            },
+            "question_7": {
+                "audio": "D jonica",
+                "visual": "D mixolidia",
+                "answer": "false",
+                "points": 1
+            },
+            "question_8": {
+                "audio": "E eolica",
+                "visual": "E eolica",
+                "answer": "true",
+                "points": 1
+            },
+            "question_9": {
+                "audio": "C# locria",
+                "visual": "C# locria",
+                "answer": "true",
+                "points": 1
+            },
+            "question_10": {
+                "audio": "Bb dorica",
+                "visual": "Bb dorica",
+                "answer": "true",
+                "points": 1
+            }
+        }
+    },
+    "left_time": 5450000,
+    "Head": "question_10"
+}

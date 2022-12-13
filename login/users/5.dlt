@@ -1,0 +1,50 @@
+{
+    "nombre": "_",
+    "cedula": "5",
+    "audioperceptiva": {},
+    "teoria": {
+        "modesScales": {
+            "question_1": {
+                "audio": "Db locria",
+                "visual": "Db locria"
+            },
+            "question_2": {
+                "audio": "G locria",
+                "visual": "G locria"
+            },
+            "question_3": {
+                "audio": "Ab frigia",
+                "visual": "Ab frigia"
+            },
+            "question_4": {
+                "audio": "C# e\u00f3lica",
+                "visual": "C# e\u00f3lica"
+            },
+            "question_5": {
+                "audio": "Bb frigia",
+                "visual": "Bb d\u00f3rica"
+            },
+            "question_6": {
+                "audio": "Ab locria",
+                "visual": "Ab mixolidia"
+            },
+            "question_7": {
+                "audio": "Db d\u00f3rica",
+                "visual": "Db d\u00f3rica"
+            },
+            "question_8": {
+                "audio": "Eb frigia",
+                "visual": "Eb j\u00f3nica"
+            },
+            "question_9": {
+                "audio": "B locria",
+                "visual": "B mixolidia"
+            },
+            "question_10": {
+                "audio": "F# locria",
+                "visual": "F# locria"
+            }
+        }
+    },
+    "left_time": 5520000
+}

@@ -146,6 +146,7 @@ class QuestionScreen(Screen):
             'rhythms': 'Ritmos',\
             'melody': 'Melodías',\
             'teoria': 'teórica',\
+            'modesScales': 'Modos',\
             'keys': 'Armaduras',\
             'scales': 'Escalas'
             }
@@ -228,6 +229,9 @@ class QuestionScreen(Screen):
             elif category == 'melody':
                 maker, audio = audioperceptiva.melody.Run_questionary(question)
                 self.ids.statement.text = audioperceptiva.melody.statement
+            elif category == 'modesScales':
+                maker, audio = audioperceptiva.modesScales.Run_questionary(question)
+                self.ids.statement.text = audioperceptiva.modesScales.statement
         elif section == 'teoria':
             if category == 'bar':
                 maker, label = teoria.compas.Run_questionary(question)
@@ -244,6 +248,9 @@ class QuestionScreen(Screen):
             elif category == 'scales':
                 maker, label = teoria.scales.Run_questionary(question)
                 self.ids.statement.text = teoria.scales.statement
+            elif category == 'modesScales':
+                maker, label = teoria.modesScales.Run_questionary(question)
+                self.ids.statement.text = teoria.modesScales.statement
 
         self.staff = maker
         self.ids.relative.add_widget(maker)
