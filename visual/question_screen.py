@@ -7,6 +7,7 @@ from kivy.animation import Animation
 
 from visual import kv_elements, popup_noAnswer
 import audioperceptiva, teoria
+from audio.midi import midi_duration_seconds
 
 import json
 import os
@@ -295,21 +296,32 @@ class QuestionScreen(Screen):
             self.ids.verdad.liberate()
 
     def play_sound(self):
-        filename = self.audio[0]
-        self.sound = SoundLoader.load(filename)
-        self.sound.play()
-        Clock.schedule_once(self.stop_sound, self.audio[1])
+        midi_path = self.audio[0]
+        # 1) Sonar ya
+        self.midi_player.play(midi_path, on_finished=self.on_midi_finished)
+
+        # 2) Calcular duración y programar stop como antes
+        dur = midi_duration_seconds(midi_path)
+        Clock.schedule_once(self.stop_sound, dur)
+
+        # 3) UI
         self.ids.pre.disabled = True
         self.ids.sig.disabled = True
+        self.ids.btnPlay.disabled = True
 
     def stop_sound(self, *args):
-        self.sound.stop()
-        del self.sound
+        # Detener ahora mismo
+        self.midi_player.stop(wait=False)
+        # UI como antes
         self.ids.btnPlay.disabled = False
         if self.sm.indexQstn > 1:
             self.ids.pre.disabled = False
         self.ids.sig.disabled = False
-    
+
+    def on_midi_finished(self):
+        # Si prefieres reusar tu lógica al finalizar naturalmente
+        Clock.schedule_once(self.stop_sound, 0)
+        
     def check_answer(self):
         if any([self.ids[x].selected for x in ['verdad', 'falso']]):
             return True
