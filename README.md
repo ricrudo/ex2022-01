@@ -1,5 +1,6 @@
 Arreglo definitivo: recompilar Python enlazando un OpenSSL “real”
 1) Instala OpenSSL 1.1 en tu home
+
 mkdir -p ~/src && cd ~/src
 curl -O https://www.openssl.org/source/openssl-1.1.1w.tar.gz
 tar xzf openssl-1.1.1w.tar.gz
