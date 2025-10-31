@@ -2,10 +2,13 @@ from midiutil import MIDIFile
 from ried.note.note_generator import Note, Silence
 from ried.chord.chord_generator import Chord
 import os
+import mido
 
 def create_midiFile(content, tempo=84, program=None, channel=None, volume=[100], filename='question'):
-    if not channel:
+    if not channel and not program:
         channel = [0]
+    if not channel and program:
+        channel = [1]
     while len(channel) < len(content):
         channel.append(len(channel))
     if program:
@@ -50,6 +53,22 @@ def add_coda(archivo, time):
         time += 1
     return time
 
+def midi_duration_seconds(midi_path: str, default_tempo: int = 500_000) -> float:
+    """
+    Devuelve la duración total en segundos del archivo MIDI,
+    respetando cambios de tempo.
+    """
+    mid = mido.MidiFile(midi_path)
+    tpb = mid.ticks_per_beat
+    tempo = default_tempo
+    elapsed = 0.0
+
+    for msg in mido.merge_tracks(mid.tracks):
+        if msg.time:
+            elapsed += mido.tick2second(msg.time, tpb, tempo)
+        if msg.type == 'set_tempo':
+            tempo = msg.tempo
+    return elapsed
 
 if __name__ == '__main__':
     
