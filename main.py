@@ -13,6 +13,7 @@ from ried_kivy.interactive_staff import staff_generator
 from login.login import Login
 from visual import QuestionScreen, Timer, PromptSend, EndScreen, kv_elements
 from audioperceptiva import rhythms
+from audio.midiOutPlayer import MidiOutPlayer
 
 import os
 import json
@@ -28,6 +29,7 @@ class SM(ScreenManager):
         question = QuestionScreen(name='Question')
         question.sm = self
         question.timer = Timer(parent=question, time=1)
+        question.midi_player = MidiOutPlayer(port_name="IAC Driver Bus 1")
         self.add_widget(question)
         promptSend = PromptSend(name='PromptSend')
         promptSend.sm = self
