@@ -3,7 +3,7 @@ Arreglo definitivo: recompilar Python enlazando un OpenSSL “real”
 
 mkdir -p ~/src && cd ~/src
 
-curl -O https://www.openssl.org/source/openssl-1.1.1w.tar.gz
+curl -O -L https://www.openssl.org/source/openssl-1.1.1w.tar.gz
 
 tar xzf openssl-1.1.1w.tar.gz
 
