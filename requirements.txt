@@ -3,3 +3,5 @@ git+https://github.com/ricrudo/ried.git
 kivy
 midiutil
 requests
+mido
+python-rtmidi
