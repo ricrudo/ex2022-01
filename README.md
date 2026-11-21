@@ -18,7 +18,7 @@ make install
 
 2) Descargar python 3.9.21
 
-cd ~/src
+cd ~/src 
 
 curl -O -L https://www.python.org/ftp/python/3.9.21/Python-3.9.21.tgz
 
@@ -43,4 +43,18 @@ export PATH="$HOME/opt/openssl-1.1/bin:$PATH"
 
 make -j4
 
+sudo make altinstall
+
+
+Version de un solo comando
+
+cd ~/src &&
+curl -fLO https://www.python.org/ftp/python/3.9.21/Python-3.9.21.tgz &&
+tar xzf Python-3.9.21.tgz &&
+cd Python-3.9.21 &&
+export CPPFLAGS="-I$HOME/opt/openssl-1.1/include" &&
+export LDFLAGS="-L$HOME/opt/openssl-1.1/lib -Wl,-rpath,$HOME/opt/openssl-1.1/lib" &&
+export PATH="$HOME/opt/openssl-1.1/bin:$PATH" &&
+./configure --with-openssl="$HOME/opt/openssl-1.1" --enable-optimizations &&
+make -j4 &&
 sudo make altinstall
