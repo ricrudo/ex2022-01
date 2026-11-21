@@ -1,4 +1,4 @@
-Arreglo definitivo: recompilar Python enlazando un OpenSSL “real”
+  Arreglo definitivo: recompilar Python enlazando un OpenSSL “real”
 1) Instala OpenSSL 1.1 en tu home
 
 mkdir -p ~/src && cd ~/src
@@ -15,10 +15,22 @@ make -j4
 
 make install
 
+2) Descargar python 3.9.21
+
+cd ~/src
+
+# Descargar el código fuente de Python 3.9.21
+curl -O -L https://www.python.org/ftp/python/3.9.21/Python-3.9.21.tgz
+
+# Descomprimir
+tar xzf Python-3.9.21.tgz
+
+# Entrar en la carpeta
+cd Python-3.9.21
 
 Catalina es Intel, así que darwin64-x86_64-cc aplica.
 
-2) Reconfigura y recompila Python 3.9.21 usando ese OpenSSL
+3) Reconfigura y recompila Python 3.9.21 usando ese OpenSSL
 cd ~/src/Python-3.9.21   # ajusta a la ruta donde tengas las fuentes
 
 make distclean || true
