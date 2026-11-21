@@ -20,13 +20,10 @@ make install
 
 cd ~/src
 
-Descargar el código fuente de Python 3.9.21
 curl -O -L https://www.python.org/ftp/python/3.9.21/Python-3.9.21.tgz
 
-Descomprimir
 tar xzf Python-3.9.21.tgz
 
-Entrar en la carpeta
 cd Python-3.9.21
 
 Catalina es Intel, así que darwin64-x86_64-cc aplica.
