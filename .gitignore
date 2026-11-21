@@ -1,0 +1,34 @@
+# Entorno y archivos generados por Python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Herramientas de desarrollo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Archivos del sistema y editores
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Configuración local y secretos
+.env
+.env.*
+!.env.example
+
+# Archivos generados por la aplicación
+audio/*.mid
+*.log
+
+# Datos locales de usuarios y resultados de exámenes
+login/users/*.dlt
+
+# Artefactos de empaquetado
+build/
+dist/

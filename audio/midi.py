@@ -48,7 +48,7 @@ def add_note(archivo, fig, tr, channel, volume, time):
         archivo.addNote(track=tr, channel=channel[tr], pitch=0, time=time, duration=fig.duration, volume=0)
   
 def add_coda(archivo, time):
-    for x in range(4):    
+    for x in range(1):
         archivo.addNote(track=0, channel=0, pitch=0, time=time, duration=1, volume=0)
         time += 1
     return time

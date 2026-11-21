@@ -3,6 +3,7 @@ import os
 from random import choice
 
 from ried.bar.bar_generator import Bar
+from ried.note.note_generator import Note
 from ried_kivy.interactive_staff import staff_generator
 
 from audio import midi
@@ -50,14 +51,20 @@ def make_audio(question):
     distribution = []
     for pulso in range(num):
         if pulso == 0:
-            content.append('C5')
+            pitch = 'C5'
         else:
-            content.append('G4')
+            pitch = 'G4'
+        # `ried.Note('D4')` reuses a cached singleton.  `Bar` tries to
+        # deepcopy repeated content, which fails with that implementation
+        # of Note (notably on Python 3.13).  Give every item its own Note
+        # instance; Beat will replace this temporary duration with the one
+        # from the distribution below.
+        content.append(Note(pitch, duration=1))
         if den == 4:
-            content.append('D4')
+            content.append(Note('D4', duration=1))
             distribution.append([0.5,0.5])
         elif den == 8:
-            content.extend(['D4', 'D4'])
+            content.extend([Note('D4', duration=1), Note('D4', duration=1)])
             distribution.append([0.5,0.5,0.5])
     bar = Bar(question, content=content, subdivision='distribution', distribution=distribution)
     audio = midi.create_midiFile(content=[bar], program=[115])

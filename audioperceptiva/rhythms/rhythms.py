@@ -3,6 +3,7 @@ import os
 from random import choice
 
 from ried.bar.bar_generator import Bar
+from ried.note.note_generator import Note
 from ried_kivy.interactive_staff import staff_generator
 
 from audio import midi
@@ -50,14 +51,17 @@ def Run_questionary(question):
     return staff, audio
 
 def make_audio(question):
-    content = ['B4' for j in range(sum([len(x) for x in question]))]
+    # Use independent Note objects. ried caches Note('B4'), and Bar attempts
+    # to deepcopy repeated objects, which fails because Note.__new__ requires
+    # the note name.
+    content = [Note('B4', duration=1) for j in range(sum(len(x) for x in question))]
     bar = Bar('4-4', content=content, subdivision='distribution', distribution=question)
     audio = midi.create_midiFile(content=[bar], program=[115])
     return audio
 
 
 def make_visual(question):
-    content = ['B4' for j in range(sum([len(x) for x in question]))]
+    content = [Note('B4', duration=1) for j in range(sum(len(x) for x in question))]
     bar = Bar('4-4', content=content, subdivision='distribution', distribution=question)
     interStaff = staff_generator.InteractiveStaff()
     interStaff.init_staff(content=[bar])

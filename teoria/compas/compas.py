@@ -4,6 +4,7 @@ from random import choice
 from kivy.uix.label import Label
 
 from ried.bar.bar_generator import Bar
+from ried.note.note_generator import Note
 from ried_kivy.interactive_staff import staff_generator
 
 
@@ -75,7 +76,9 @@ def make_label(question):
     return l
     
 def make_staff(measure, question):
-    content = ['B4' for j in range(sum([len(x) for x in question]))]
+    # Create independent notes because ried caches Note('B4') and Bar tries
+    # to deepcopy repeated notes before assigning their durations.
+    content = [Note('B4', duration=1) for j in range(sum(len(x) for x in question))]
     bar = Bar(measure, content=content, subdivision='distribution', distribution=question)
     interStaff = staff_generator.InteractiveStaff()
     interStaff.init_staff(content=[bar])
