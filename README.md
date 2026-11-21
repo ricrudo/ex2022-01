@@ -40,5 +40,7 @@ export LDFLAGS="-L$HOME/opt/openssl-1.1/lib -Wl,-rpath,$HOME/opt/openssl-1.1/lib
 export PATH="$HOME/opt/openssl-1.1/bin:$PATH"
 
 ./configure --with-openssl="$HOME/opt/openssl-1.1" --enable-optimizations
+
 make -j4
+
 sudo make altinstall
